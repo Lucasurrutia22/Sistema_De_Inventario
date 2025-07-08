@@ -1,0 +1,62 @@
+<!-- Declaración del tipo de documento HTML -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Inicio del documento HTML con idioma español -->
+
+<head>
+  <!-- Configuración del conjunto de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Para que el diseño sea responsive en dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Título que se muestra en la pestaña del navegador -->
+  <title>Registro - Inventario</title>
+
+  <!-- Vinculación del archivo CSS de estilos -->
+  <link rel="stylesheet" href="/css/registro.css" />
+</head>
+
+<body> <!-- Inicio del contenido visible del sitio -->
+
+  <!-- Contenedor principal del formulario de registro -->
+  <div class="registro-container">
+    
+    <!-- Título del formulario -->
+    <h2>Crear una Cuenta</h2>
+
+    <!-- Formulario de registro -->
+    <form id="form-registro">
+      <!-- Campo de texto para el nombre completo -->
+      <input type="text" id="nombre" placeholder="Nombre completo" required />
+
+      <!-- Campo de entrada para correo electrónico -->
+      <input type="email" id="correo" placeholder="Correo electrónico" required />
+
+      <!-- Campo de entrada para la contraseña -->
+      <input type="password" id="contrasena" placeholder="Contraseña" required />
+
+      <!-- Botón para enviar el formulario -->
+      <button type="submit">Registrarse</button>
+
+      <!-- Enlace para usuarios que ya tienen una cuenta -->
+      <p class="login-link">
+        ¿Ya tienes una cuenta? <a href="/html/login.html">Inicia sesión</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Script JavaScript para manejar el evento del formulario -->
+  <script>
+    // Agrega un escuchador al formulario para cuando se envíe
+    document.getElementById("form-registro").addEventListener("submit", function(e) {
+      e.preventDefault(); // Evita que la página se recargue
+
+      // Aquí se puede agregar lógica para guardar los datos en una base de datos
+      alert("✅ Registro exitoso (simulado)"); // Alerta simulando el éxito
+
+      // Se podrían limpiar los campos o redirigir al usuario si se desea
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* Fuente principal desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Reset general de márgenes y paddings, y usar box-sizing para todo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos básicos del body */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #54acfa 0%, #6c63ff 100%, #eaf1f8 100%);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Contenedor principal del sistema de inventario */
+.inventario-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, rgba(34,193,195,0.97) 0%, rgba(253,187,45,0.97) 100%);
+  padding: 38px 48px 38px 48px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Detalle decorativo: círculo de fondo para el contenedor */
+.inventario-container::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: -70px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #54acfa 60%, #6c63ff 100%);
+  border-radius: 50%;
+  opacity: 0.13;
+  z-index: 0;
+}
+
+.inventario-container > * {
+  position: relative;
+  z-index: 1;
+}
+}
+
+/* Estilo de títulos */
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(84,172,250,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  background: linear-gradient(90deg, #54acfa 30%, #6c63ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Diseño del formulario de ingreso de productos */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Estilo de los campos de entrada del formulario */
+.formulario input {
+  color: #111111;
+  background: rgb(252, 249, 249);
+  transition: background 0.3s, color 0.3s;
+  opacity: 1;
+/* Placeholder blanco para los inputs del formulario */
+.formulario input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+  flex: 1 1 200px; /* adaptable pero con mínimo de 200px */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Botón de agregar producto */
+.formulario button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #0056b3; /* color más oscuro al pasar el mouse */
+}
+
+/* Sección donde se muestra la tabla de productos */
+.seccion-tabla {
+  margin-top: 20px;
+}
+
+/* Estilos generales de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: rgba(0,0,0,0.18);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Celdas de tabla */
+th, td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  color: #fff;
+}
+}
+
+/* Cabeceras de la tabla */
+th {
+  background: linear-gradient(90deg, #232526 60%, #414345 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #6c63ff;
+}
+
+/* Botón de eliminar dentro de la tabla */
+td button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+td button:hover {
+  background-color: #b02a37;
+}
+
+/* Botón para cerrar sesión */
+.cerrar-sesion {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #54acfa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cerrar-sesion:hover {
+  background-color: #5a6268;
+}
+
+/* Botón para enviar correo */
+.Enviar-correo {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #fa0606;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Responsive: diseño adaptativo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .inventario-container {
+    padding: 18px 6vw;
+    border-radius: 14px;
+  }
+  .formulario {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .formulario input, .formulario button {
+    width: 100%;
+  }
+  table {
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #eaf1f8;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #54acfa 60%, #6c63ff 100%);
+  border-radius: 8px;
+}
+
+/* Botón para descargar CSV */
+.descargar-csv {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.descargar-csv:hover {
+  background-color: #218838;
+}
+
+/* Botón para descargar PDF */
+.descargar-pdf {
+  display: block;
+  margin: 10px auto 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.descargar-pdf:hover {
+  background-color: #524bd2;
+}

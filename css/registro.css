@@ -1,0 +1,77 @@
+/* Importar fuente Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Reset general: elimina márgenes y paddings por defecto y aplica box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del body */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Fuente principal */
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
+  height: 100vh; /* Altura completa de la pantalla */
+  display: flex; /* Uso de Flexbox para centrar */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+/* Contenedor principal del formulario de registro */
+.registro-container {
+  background: #0f989c; /* Fondo del contenedor */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Sombra suave */
+  width: 100%; /* Ocupa todo el ancho posible */
+  max-width: 400px; /* Pero no más de 400px */
+}
+
+/* Título del formulario */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Estilos de los inputs del formulario */
+form input {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Estilos del botón de registro */
+form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4e54c8; /* Azul inicial */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave al cambiar color */
+}
+
+/* Estilo al pasar el mouse sobre el botón */
+form button:hover {
+  background-color: #11eb11; /* Verde al pasar el mouse */
+}
+
+/* Contenedor del enlace de regreso al login */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Estilo del enlace */
+.login-link a {
+  color: #fcfcfc;
+  text-decoration: none; /* Quitar subrayado */
+}

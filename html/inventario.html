@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventario - Control de Inventario</title>
+  <link rel="stylesheet" href="/css/invetario.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+   
+</head>
+<body>
+
+  <div class="inventario-container">
+    <h2>Control de Inventario</h2>
+
+    <!-- Formulario para agregar productos -->
+    <div class="formulario">
+      <input type="text" id="producto" placeholder="Nombre del producto" />
+      <input type="number" id="cantidad" placeholder="Cantidad actual" />
+      <input type="number" id="minimo" placeholder="Cantidad mínima" />
+      <button onclick="agregarProducto()">Agregar</button>
+    </div>
+
+    <!-- Sección de productos que necesitan reposición -->
+    <div class="seccion-tabla">
+      <h3>❌ Productos que necesitan reposición</h3>
+      <table id="tabla-reposicion">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Mínimo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Sección de productos con stock suficiente -->
+    <div class="seccion-tabla">
+      <h3>🟢 Productos con stock suficiente</h3>
+      <table id="tabla-suficiente">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Mínimo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Botones de cerrar sesión y descargar CSV -->
+    <button class="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+    <button class="descargar-csv" onclick="descargarInventarioCSV()">Descargar Inventario CSV</button>
+    <button class="descargar-pdf" onclick="descargarInventarioPDF()">Descargar Inventario PDF</button>
+  </div>
+
+  <script src="/js/inventario.js"></script>
+</body>
+</html>
+,

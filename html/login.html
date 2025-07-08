@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración del conjunto de caracteres (UTF-8) para admitir acentos y caracteres especiales -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace que el diseño sea responsive, adaptándose a móviles, tablets y pantallas pequeñas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Título de la pestaña del navegador -->
+  <title>Empresa Fati</title>
+
+  <!-- Enlace al archivo CSS que contiene los estilos del login -->
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+
+  <!-- Contenedor principal del formulario de login -->
+  <div class="login-container">
+    
+    <!-- Título del formulario -->
+    <h2 class="login-title">
+      <span style="font-weight: 700; letter-spacing: 1px; font-size: 2.1rem; color: #fff; text-shadow: 0 2px 12px rgba(78,84,200,0.18);">
+        <span style="color:#4e54c8;">Empresa</span> Fati
+      </span>
+      <div style="font-size: 1.1rem; font-weight: 400; color: #e0e0e0; margin-top: 2px; letter-spacing: 0.5px;">Acceso Seguro</div>
+    </h2>
+
+    <!-- Formulario de inicio de sesión -->
+    <form id="loginForm">
+      
+      <!-- Grupo del campo de usuario -->
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <!-- Campo de texto para ingresar el usuario -->
+        <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+      </div>
+
+      <!-- Grupo del campo de contraseña -->
+      <div class="form-group">
+        <label for="clave">Contraseña</label>
+        <!-- Campo de texto para ingresar la contraseña (tipo password para ocultar caracteres) -->
+        <input type="password" id="clave" name="clave" placeholder="Ingresa tu contraseña" required>
+      </div>
+
+      <!-- Mensaje de error (oculto por defecto, se muestra solo si hay un error de validación) -->
+      <div id="mensajeError" class="error-text"></div>
+
+      <!-- Botón para enviar el formulario -->
+      <button type="submit" class="login-btn">🔐 Acceder</button>
+
+      <!-- Enlace adicional por si el usuario olvidó su contraseña -->
+      <div class="extra-links">
+        <a href="/html/registro.html">¿Olvidaste tu contraseña?</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Enlace al archivo JavaScript que maneja la lógica del formulario (validaciones, etc.) -->
+  <script src="/js/login.js"></script>
+</body>
+</html>

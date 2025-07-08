@@ -1,0 +1,124 @@
+/* ========== RESETEO GENERAL ========== */
+* {
+  box-sizing: border-box; /* Asegura que el padding y border no aumenten el tamaño total del elemento */
+  margin: 0;              /* Elimina márgenes por defecto */
+  padding: 0;             /* Elimina padding por defecto */
+}
+
+/* ========== ESTILO DEL CUERPO ========== */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
+  height: 100vh; /* Altura total de la ventana */
+  display: flex; /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+
+/* ========== CONTENEDOR DEL LOGIN ========== */
+.login-container {
+  background: rgba(15, 152, 156, 0.95); /* Fondo con transparencia */
+  padding: 48px 36px 36px 36px; /* Más espacio arriba y a los lados */
+  border-radius: 22px; /* Bordes más redondeados */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 8px 0 rgba(0,0,0,0.15); /* Sombra doble moderna */
+  width: 100%;
+  max-width: 420px;
+  border: 1.5px solid rgba(255,255,255,0.18); /* Borde sutil */
+  backdrop-filter: blur(4px); /* Efecto glassmorphism */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Detalle decorativo: círculo de fondo */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #4e54c8 60%, #8f94fb 100%);
+  border-radius: 50%;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.login-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== TÍTULO DE INICIO DE SESIÓN ========== */
+.login-container h2 {
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 25px; /* Espacio debajo del título */
+  color: #fff; /* Color blanco */
+}
+
+/* ========== GRUPO DE FORMULARIO (INPUT + LABEL) ========== */
+.form-group {
+  margin-bottom: 20px; /* Espacio inferior entre grupos */
+}
+
+label {
+  display: block; /* Ocupa todo el ancho */
+  margin-bottom: 8px; /* Espacio debajo del label */
+  color: #fff; /* Color blanco */
+  font-weight: 500; /* Negrita moderada */
+}
+
+/* ========== CAMPOS DE TEXTO ========== */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño de texto */
+}
+
+/* ========== BOTÓN DE ACCESO ========== */
+.login-btn {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  background-color: #4e54c8; /* Color base del botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  cursor: pointer; /* Cursor tipo mano */
+  transition: background 0.3s ease; /* Transición suave */
+}
+
+.login-btn:hover {
+  background-color: #17e432; /* Cambio de color al pasar el mouse */
+}
+
+/* ========== ENLACE DE "OLVIDASTE TU CONTRASEÑA" ========== */
+.extra-links {
+  margin-top: 15px; /* Espacio superior */
+  text-align: center; /* Centrado del texto */
+}
+
+.extra-links a {
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+.extra-links a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* ========== MENSAJE DE ERROR ========== */
+.error-text {
+  color: #ffdddd; /* Color de texto claro sobre fondo rojo */
+  background-color: #ff4d4d; /* Fondo rojo */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espacio debajo del mensaje */
+  text-align: center; /* Centrado */
+  display: none; /* Oculto por defecto (se muestra con JavaScript) */
+}
