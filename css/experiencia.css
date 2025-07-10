@@ -1,10 +1,17 @@
 body {
-  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
-  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
-  height: 100vh; /* Altura total de la ventana */
-  display: flex; /* Usa flexbox para centrar */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 80% 10%, rgba(79,140,255,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 90%, rgba(67,233,123,0.13) 0%, transparent 70%),
+    linear-gradient(135deg, #232526 0%, #4e54c8 60%, #38f9d7 100%);
+  background-blend-mode: lighten, lighten, normal;
+  overflow-x: hidden;
 }
 .exp-container {
     background: #fff;

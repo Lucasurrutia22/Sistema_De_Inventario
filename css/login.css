@@ -5,16 +5,50 @@
   padding: 0;             /* Elimina padding por defecto */
 }
 
-/* ========== ESTILO DEL CUERPO ========== */
+/* ========== ESTILO DEL CUERPO MEJORADO Y FUTURISTA ========== */
 body {
-  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
-  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
-  height: 100vh; /* Altura total de la ventana */
-  display: flex; /* Usa flexbox para centrar */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 80% 10%, rgba(79,140,255,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 90%, rgba(67,233,123,0.13) 0%, transparent 70%),
+    linear-gradient(135deg, #232526 0%, #4e54c8 60%, #38f9d7 100%);
+  background-blend-mode: lighten, lighten, normal;
+  overflow-x: hidden;
 }
 
+/* Efecto de partículas suaves arriba */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(67,233,123,0.12) 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+/* Efecto de partículas suaves abajo */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(79,140,255,0.15) 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(10px);
+}
 
 /* ========== CONTENEDOR DEL LOGIN ========== */
 .login-container {
