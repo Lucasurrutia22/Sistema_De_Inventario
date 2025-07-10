@@ -12,7 +12,7 @@
 <body>
 
   <div class="inventario-container">
-    <h2>Control de Inventario</h2>
+    <h2 class="titulo-inventario">📦 Control de Inventario</h2>
 
     <!-- Formulario para agregar productos -->
     <div class="formulario">
@@ -54,13 +54,17 @@
       </table>
     </div>
 
-    <!-- Botones de cerrar sesión y descargar CSV -->
+    <!-- Botones de acción alineados -->
+    <div class="botones-acciones">
+      <button class="descargar-csv" onclick="descargarInventarioCSV()">Descargar Inventario CSV</button>
+      <button class="descargar-pdf" onclick="descargarInventarioPDF()">Descargar Inventario PDF</button>
+      <button class="ver-estadisticas" onclick="window.location.href='estadistica.html'">Ver Estadísticas</button>
+    </div>
+
+    <!-- Botón de cerrar sesión debajo y centrado -->
     <button class="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
-    <button class="descargar-csv" onclick="descargarInventarioCSV()">Descargar Inventario CSV</button>
-    <button class="descargar-pdf" onclick="descargarInventarioPDF()">Descargar Inventario PDF</button>
   </div>
 
   <script src="/js/inventario.js"></script>
 </body>
 </html>
-,

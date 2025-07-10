@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Redes Sociales</title>
+    <link rel="stylesheet" href="../css/redes.css">
+</head>
+<body>
+    <!-- Menú lateral desplegable -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav class="sidebar">
+      <div class="sidebar-content">
+        <a href="Informacion.html">👤 Quiénes Somos</a>
+        <a href="experiencia.html">💼 Experiencia</a>
+        <a href="login.html">🔑 Iniciar sesión</a>
+      </div>
+    </nav>
+
+    <div class="redes-container">
+        <h2 class="titulo-redes">🌐 Síguenos en nuestras redes sociales</h2>
+        <div class="redes-lista">
+            <div class="red-social wsp" onclick="copiarWsp()">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                <span>WhatsApp</span>
+                <small id="wsp-copiado" class="copiado-msg">¡Número copiado!</small>
+            </div>
+            <a class="red-social ig" href="https://instagram.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a class="red-social fb" href="https://facebook.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+        </div>
+    </div>
+    <script src="../js/redes.js"></script>
+</body>
+</html>

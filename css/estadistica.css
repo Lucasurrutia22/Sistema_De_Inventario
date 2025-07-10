@@ -1,0 +1,76 @@
+/* Fondo y fuente general */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #54acfa 0%, #6c63ff 100%, #eaf1f8 100%);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;                /* Añadido para centrar */
+  justify-content: center;      /* Centra horizontalmente */
+  align-items: center;          /* Centra verticalmente */
+}
+
+/* Contenedor principal */
+.estadistica-container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(60, 72, 88, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Título */
+.estadistica-container h2 {
+    color: #1a237e;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.titulo-estadistica {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 50%, #0078d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 6px 32px rgba(79, 140, 255, 0.13);
+  border-bottom: 3px solid #38f9d733;
+  padding-bottom: 12px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.titulo-estadistica::before {
+  content: "📈";
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-120%, 10%);
+  opacity: 0.85;
+}
+
+/* Botón de volver */
+.btn-volver {
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(90deg, #4f8cff 0%, #0078d4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-volver:hover {
+    background: linear-gradient(90deg, #0078d4 0%, #4f8cff 100%);
+}

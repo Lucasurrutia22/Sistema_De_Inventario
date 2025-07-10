@@ -22,7 +22,7 @@ body {
   width: 95%;
   max-width: 1000px;
   margin: 50px auto;
-  background: linear-gradient(135deg, rgba(34,193,195,0.97) 0%, rgba(253,187,45,0.97) 100%);
+  background: linear-gradient(135deg, rgba(57, 142, 238, 0.97) 0%, rgba(65, 235, 130, 0.97) 100%);
   padding: 38px 48px 38px 48px;
   border-radius: 22px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(0,0,0,0.10);
@@ -51,7 +51,7 @@ body {
   position: relative;
   z-index: 1;
 }
-}
+
 
 /* Estilo de títulos */
 h2 {
@@ -61,8 +61,8 @@ h2 {
   color: #fff;
   letter-spacing: 1px;
   font-weight: 700;
-  text-shadow: 0 2px 12px rgba(84,172,250,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-  background: linear-gradient(90deg, #54acfa 30%, #6c63ff 100%);
+  text-shadow: 0 2px 12px rgba(252, 252, 252, 0.18), 0 1.5px 8px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #ffffff 30%, #6c63ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -140,7 +140,7 @@ th, td {
   border: 1px solid #e0e0e0;
   color: #fff;
 }
-}
+
 
 /* Cabeceras de la tabla */
 th {
@@ -172,7 +172,7 @@ td button:hover {
   margin: 30px auto 0;
   padding: 12px 30px;
   font-size: 16px;
-  background-color: #54acfa;
+  background-color: #6c63ff;
   color: white;
   border: none;
   border-radius: 8px;
@@ -196,6 +196,74 @@ td button:hover {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+/* Botón para ver estadísticas */
+.ver-estadisticas {
+  display: block;
+  margin: 10px auto 0;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ver-estadisticas:hover {
+  background-color: #e65100;
+}
+
+/* Agrupa los botones de acción en una fila */
+.botones-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Igualar el ancho y estilo de todos los botones dentro de la fila */
+.botones-acciones button {
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1 1 180px;
+  padding: 12px 0;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0;
+  text-align: center;
+}
+
+/* Hover para todos los botones */
+.botones-acciones button:hover {
+  background-color: #524bd2;
+}
+
+/* Título principal del inventario */
+.titulo-inventario {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 36px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff; /* Color blanco sólido */
+  text-shadow: 0 4px 24px rgba(76, 110, 245, 0.15);
+  padding-bottom: 8px;
+  border-bottom: 2px solid #6c63ff22;
+  display: inline-block;
+  width: 100%;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 /* Responsive: diseño adaptativo para pantallas pequeñas */
@@ -246,7 +314,7 @@ td button:hover {
   margin: 20px auto;
   padding: 12px 30px;
   font-size: 16px;
-  background-color: #28a745;
+  background-color: #6c63ff;
   color: white;
   border: none;
   border-radius: 8px;

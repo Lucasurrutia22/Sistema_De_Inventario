@@ -1,12 +1,11 @@
 /* Establece el fondo general y centra el contenido en la pantalla */
 body {
-    background: linear-gradient(135deg, #e0e7ff 0%, #f4f6f8 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
+  height: 100vh; /* Altura total de la ventana */
+  display: flex; /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
 }
 
 /* Contenedor principal del formulario de recuperación */

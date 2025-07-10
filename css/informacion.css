@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Fondo con degradado diagonal */
+  height: 100vh; /* Altura total de la ventana */
+  display: flex; /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+.info-container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(60, 72, 88, 0.15);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+.info-container h2 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.info-container p {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.info-container img {
+    width: 120px;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(60, 72, 88, 0.10);
+}
+
+/* Menú lateral desplegable */
+.menu-toggle {
+  display: none;
+}
+.menu-icon {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  font-size: 2rem;
+  color: #fff;
+  background: #4e54c8;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.10);
+  transition: background 0.2s;
+}
+.menu-icon:hover {
+  background: #6c63ff;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: linear-gradient(135deg, #4e54c8 60%, #8f94fb 100%);
+  box-shadow: 2px 0 16px rgba(60,72,88,0.10);
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+  z-index: 1000;
+}
+.menu-toggle:checked ~ .sidebar {
+  transform: translateX(0);
+}
+.menu-toggle:checked + .menu-icon {
+  left: 242px;
+}
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 24px;
+  padding: 0 28px;
+}
+.sidebar-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sidebar-content a:hover {
+  color: #ffe082;
+}
+@media (max-width: 600px) {
+  .sidebar {
+    width: 70vw;
+    min-width: 160px;
+  }
+  .menu-toggle:checked + .menu-icon {
+    left: 72vw;
+  }
+}
